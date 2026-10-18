@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#FBF5EF">
+  <meta name="description" content="Find nearby healthcare professionals and clinics with a Google Maps search.">
+  <title>Contact a Doctor — Yajnaseni</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Great+Vibes&family=Noto+Sans+Kannada:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="contact.css">
+</head>
+<body class="contact-page">
+  <header class="site-header">
+    <a class="brand" href="index.html#home" aria-label="Yajnaseni home">
+      <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M24 39C14 34 12 25 15 19c4-7 9-10 9-10s5 3 9 10c3 6 1 15-9 20Z"/><path d="M23 39C13 38 7 32 6 25c6 0 12 2 17 10M25 39c10-1 16-7 17-14-6 0-12 2-17 10M19 37c-3-7-3-15 0-22M29 37c3-7 3-15 0-22M24 39V10"/></g></svg></span>
+      <span class="brand-copy"><span class="brand-name">Yajnaseni</span><span class="brand-tagline">Your Health. Your Strength.</span></span>
+    </a>
+    <div class="header-menu" id="contact-header-menu">
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html#checker">Symptoms</a>
+        <a href="index.html#checker">Probable Diagnosis</a>
+        <a href="journal.html">Health Journal</a>
+        <div class="nav-dropdown" id="contact-resources-dropdown">
+          <button type="button" class="resource-trigger" id="contact-resources-trigger" aria-expanded="false" aria-controls="contact-resources-menu">Resources</button>
+          <div class="resource-menu" id="contact-resources-menu" hidden>
+            <a href="resources.html#health-resources">Health Resources</a>
+            <a href="resources.html#diet-nutrition">Diet &amp; Nutrition</a>
+            <a href="resources.html#lifestyle-wellness">Lifestyle &amp; Wellness</a>
+          </div>
+        </div>
+        <a class="contact-nav-active" href="contact.html" aria-current="page">Contact Doctor</a>
+      </nav>
+      <div class="header-actions">
+        <div class="language-picker">
+          <label class="sr-only" for="contact-language">Language options supported on the main website</label>
+          <svg class="language-globe" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M2.8 12h18.4M12 2.5a15 15 0 0 1 0 19M12 2.5a15 15 0 0 0 0-19M5.2 6.5h13.6m-13.6 11h13.6"/></svg>
+          <select class="language-select" id="contact-language" aria-label="Language options supported on the main website">
+            <option value="en">English</option><option value="kn">ಕನ್ನಡ · Main site</option>
+          </select>
+        </div>
+        <a class="button button-small button-primary header-cta" href="index.html#checker">Get Started</a>
+      </div>
+    </div>
+    <button class="mobile-menu-toggle" id="contact-menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="contact-header-menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main>
+    <section class="contact-hero" aria-labelledby="contact-title">
+      <div class="contact-hero-copy">
+        <p class="contact-eyebrow">CARE THAT MEETS YOU WHERE YOU ARE</p>
+        <h1 id="contact-title">Contact a Doctor</h1>
+        <p class="contact-hero-intro">Find qualified healthcare professionals and clinics near you when you need support.</p>
+        <ul class="contact-trust-list">
+          <li><svg viewBox="0 0 28 28" aria-hidden="true"><path d="M14 3 23 7v6c0 6-4 10-9 13-5-3-9-7-9-13V7l9-4Z"/><path d="m10 14 3 3 6-7"/></svg><span>Real Clinics<br>and Doctors</span></li>
+          <li><svg viewBox="0 0 28 28" aria-hidden="true"><path d="M22 11c0 6-8 14-8 14S6 17 6 11a8 8 0 1 1 16 0Z"/><circle cx="14" cy="11" r="2.5"/></svg><span>Nearby Locations<br>via Google Maps</span></li>
+          <li><svg viewBox="0 0 28 28" aria-hidden="true"><path d="M14 24S3 18 3 10a6 6 0 0 1 11-3 6 6 0 0 1 11 3c0 8-11 14-11 14Z"/></svg><span>Safe and Reliable<br>Information</span></li>
+        </ul>
+      </div>
+      <div class="contact-hero-art" aria-label="Yajnaseni women's health illustration">
+        <span class="contact-botanical botanical-left" aria-hidden="true"><img src="botanical.svg" alt=""></span>
+        <div class="contact-photo-wrap"><img class="contact-photo" src="image/Doctor.avif" alt="Woman healthcare professional, photographed in a clinical setting"></div>
+        <span class="contact-botanical botanical-right" aria-hidden="true"><img src="botanical.svg" alt=""></span>
+        <p class="contact-hero-note">You are not alone.<br>Support is always<br>within reach.<span>♡</span></p>
+      </div>
+    </section>
+
+    <section class="provider-search-panel" aria-label="Search nearby doctors">
+      <form class="provider-search-form" id="provider-search-form" novalidate>
+        <div class="location-field search-field">
+          <label for="doctor-location"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg><span>Your location</span></label>
+          <input id="doctor-location" name="location" type="text" maxlength="120" autocomplete="street-address" placeholder="Enter your city or area">
+          <button class="location-button" id="use-my-location" type="button" aria-label="Use my current location" title="Use my current location"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="7"></circle><circle cx="12" cy="12" r="2"></circle><path d="M12 2v3m0 14v3M2 12h3m14 0h3"></path></svg></button>
+        </div>
+        <div class="speciality-field search-field">
+          <label for="doctor-speciality"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 4h8v4a4 4 0 0 1-8 0V4Zm4 8v4m-5 4h10m-5-4a5 5 0 0 0-5 5m5-5a5 5 0 0 1 5 5M8 6H5v2a3 3 0 0 0 3 3m8-5h3v2a3 3 0 0 1-3 3"></path></svg><span>Speciality</span></label>
+          <select id="doctor-speciality" name="speciality">
+            <option value="all">All Specialities</option>
+            <option value="gynaecologist">Gynaecologist</option>
+            <option value="dermatologist">Dermatologist</option>
+            <option value="endocrinologist">Endocrinologist</option>
+            <option value="psychiatrist counsellor">Psychiatrist / Counsellor</option>
+            <option value="general physician">General Physician</option>
+            <option value="women's health clinic">Women's Health Clinic</option>
+          </select>
+        </div>
+        <button class="button button-primary doctor-search-button" type="submit"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.7"></circle><path d="m16 16 5 5"></path></svg><span>Find Doctors Near Me</span></button>
+      </form>
+      <p class="location-status" id="location-status" role="status" aria-live="polite"></p>
+      <div class="speciality-chips" aria-label="Choose a speciality">
+        <button type="button" data-speciality="all" class="is-active" aria-pressed="true">All Specialities</button>
+        <button type="button" data-speciality="gynaecologist" aria-pressed="false">Gynaecologist</button>
+        <button type="button" data-speciality="dermatologist" aria-pressed="false">Dermatologist</button>
+        <button type="button" data-speciality="endocrinologist" aria-pressed="false">Endocrinologist</button>
+        <button type="button" data-speciality="psychiatrist counsellor" aria-pressed="false">Psychiatrist / Counsellor</button>
+        <button type="button" data-speciality="general physician" aria-pressed="false">General Physician</button>
+        <button type="button" data-speciality="women's health clinic" aria-pressed="false">Women's Health Clinic</button>
+      </div>
+      <p class="search-feedback" id="search-feedback" role="alert" hidden></p>
+    </section>
+
+    <section class="contact-dashboard" aria-label="Doctor search information">
+      <div class="contact-main-columns">
+        <section class="nearby-panel contact-card" aria-labelledby="nearby-heading">
+          <div class="panel-heading nearby-heading">
+            <div><h2 id="nearby-heading">Nearby Doctors and Clinics</h2><p id="nearby-caption">Search Google Maps for real providers in your area.</p></div>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          </div>
+          <div class="provider-empty-state" id="provider-empty-state">
+            <span class="empty-state-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><circle cx="21" cy="21" r="13"></circle><path d="m31 31 11 11M21 14v14m-7-7h14"></path></svg></span>
+            <h3>Find care near you</h3>
+            <p>Enter a location and choose a speciality to search Google Maps. No clinic listings are shown here until a live provider data source is connected.</p>
+            <a class="button button-outline maps-search-link" id="empty-maps-link" href="https://www.google.com/maps/search/?api=1&amp;query=women%27s+health+doctor" target="_blank" rel="noopener noreferrer">Search Google Maps <span aria-hidden="true">↗</span></a>
+          </div>
+          <p class="provider-privacy-note">Listings, ratings, phone numbers and availability are not retrieved or verified by Yajnaseni.</p>
+        </section>
+
+        <section class="map-panel contact-card" aria-labelledby="map-heading">
+          <div class="map-placeholder">
+            <div class="map-tiles" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+            <div class="map-placeholder-copy"><span class="map-pin-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M26 13c0 7-10 17-10 17S6 20 6 13a10 10 0 1 1 20 0Z"></path><circle cx="16" cy="13" r="3"></circle></svg></span><h2 id="map-heading">Your map preview</h2><p>This is a placeholder, not a live map. Open Google Maps to see current local listings.</p><button class="button button-primary map-open-button" id="map-open-button" type="button">Open in Google Maps <span aria-hidden="true">↗</span></button></div>
+            <span class="map-legend-note">No clinic markers shown</span>
+          </div>
+        </section>
+      </div>
+
+      <section class="contact-info-row" aria-label="Doctor search guidance">
+        <section class="contact-card how-card" aria-labelledby="how-heading">
+          <div class="panel-heading"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5m0-8h.01"></path></svg><h2 id="how-heading">How It Works</h2></div>
+          <ol class="how-steps">
+            <li><span>1</span><p>Enter your location and choose a speciality.</p></li>
+            <li><span>2</span><p>View nearby doctors and clinics on Google Maps.</p></li>
+            <li><span>3</span><p>Check details, ratings and contact information.</p></li>
+            <li><span>4</span><p>Call, get directions or visit the clinic's website when available.</p></li>
+          </ol>
+        </section>
+        <section class="contact-card important-card" aria-labelledby="important-heading">
+          <div class="panel-heading"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5m0-8h.01"></path></svg><h2 id="important-heading">Important Note</h2></div>
+          <ul>
+            <li>Listings and information are provided for your convenience.</li>
+            <li>Yajnaseni does not endorse any specific doctor or clinic.</li>
+            <li>Verify qualifications, availability and fees directly with the clinic.</li>
+            <li>For emergencies, seek immediate medical care.</li>
+          </ul>
+        </section>
+        <section class="contact-card emergency-card" aria-labelledby="emergency-heading">
+          <div class="emergency-card-flower" aria-hidden="true"><img src="botanical.svg" alt=""></div>
+          <div class="panel-heading"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h4l2 5-3 2c1.4 2.8 3.2 4.6 6 6l2-3 5 2v4c0 1.1-.9 2-2 2C10 21 3 14 3 5c0-1.1.9-2 2-2Z"></path></svg><h2 id="emergency-heading">Need Immediate Help?</h2></div>
+          <p>If you are experiencing severe pain, heavy bleeding or other urgent symptoms, please seek immediate medical attention at the nearest appropriate healthcare facility.</p>
+          <a class="button emergency-button" href="index.html#care">View Emergency Information <span aria-hidden="true">→</span></a>
+        </section>
+      </section>
+    </section>
+    <p class="contact-disclaimer" id="emergency-info">Yajnaseni helps you find external search options; it does not diagnose, verify providers, or replace professional care. In an emergency, contact your local emergency service or go to an emergency department.</p>
+  </main>
+  <script src="contact.js"></script>
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#FBF5EF">
+  <meta name="description" content="A private, on-device journal to record cycle dates, symptoms, mood, sleep and wellbeing.">
+  <title>Health Journal — Yajnaseni</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Great+Vibes&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="journal.css">
+</head>
+<body class="journal-page">
+  <header class="site-header">
+    <a class="brand" href="index.html#home" aria-label="Yajnaseni home">
+      <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M24 39C14 34 12 25 15 19c4-7 9-10 9-10s5 3 9 10c3 6 1 15-9 20Z"/><path d="M23 39C13 38 7 32 6 25c6 0 12 2 17 10M25 39c10-1 16-7 17-14-6 0-12 2-17 10M19 37c-3-7-3-15 0-22M29 37c3-7 3-15 0-22M24 39V10"/></g></svg></span>
+      <span class="brand-copy"><span class="brand-name">Yajnaseni</span><span class="brand-tagline">Your Health. Your Strength.</span></span>
+    </a>
+    <div class="header-menu" id="journal-header-menu">
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html#checker">Symptoms</a>
+        <a href="index.html#checker">Probable Diagnosis</a>
+        <a class="journal-nav-active" href="journal.html" aria-current="page">Health Journal</a>
+        <div class="nav-dropdown" id="journal-resources">
+          <button type="button" class="resource-trigger" id="journal-resources-trigger" aria-expanded="false" aria-controls="journal-resources-menu">Resources</button>
+          <div class="resource-menu" id="journal-resources-menu" hidden>
+            <a href="resources.html#health-resources">Health Resources</a>
+            <a href="resources.html#diet-nutrition">Diet &amp; Nutrition</a>
+            <a href="resources.html#lifestyle-wellness">Lifestyle &amp; Wellness</a>
+          </div>
+        </div>
+        <a href="contact.html">Contact Doctor</a>
+      </nav>
+      <div class="header-actions">
+        <label class="sr-only" for="journal-language">Regional language options</label>
+        <svg class="language-globe" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M2.8 12h18.4M12 2.5a15 15 0 0 1 0 19M12 2.5a15 15 0 0 0 0 19M5.2 6.5h13.6m-13.6 11h13.6"/></svg>
+        <select class="language-select journal-language" id="journal-language" aria-label="Language options supported on the main website">
+          <option value="en">English</option>
+          <option value="kn">ಕನ್ನಡ · Main site</option>
+        </select>
+        <a class="button button-small button-primary header-cta" href="index.html#checker">Get Started</a>
+      </div>
+    </div>
+    <button class="mobile-menu-toggle" id="journal-menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="journal-header-menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main class="journal-main">
+    <section class="journal-hero" aria-labelledby="journal-title">
+      <div class="journal-hero-copy">
+        <h1 id="journal-title">My Health Journal</h1>
+        <p>Track your cycle, symptoms, mood, and more.<br class="desktop-break"> Understand your patterns better.</p>
+      </div>
+      <img class="journal-hero-image" src="image/Journal.png?v=20261018-journal-replacement" width="764" height="955" alt="A journal, planner, and notebook arranged on a soft fabric surface">
+    </section>
+
+    <section class="journal-workspace" aria-label="Your health journal">
+      <nav class="journal-tabs" aria-label="Journal sections">
+        <div class="journal-tab-list" role="tablist" aria-label="Choose a journal view" aria-orientation="horizontal">
+          <button class="journal-tab is-active" type="button" role="tab" id="tab-overview" aria-controls="journal-dashboard" aria-selected="true" data-view="overview"><span class="tab-icon" aria-hidden="true"></span>Overview</button>
+          <button class="journal-tab" type="button" role="tab" id="tab-period" aria-controls="journal-dashboard" aria-selected="false" data-view="period"><span class="tab-icon" aria-hidden="true"></span>Period</button>
+          <button class="journal-tab" type="button" role="tab" id="tab-symptoms" aria-controls="journal-dashboard" aria-selected="false" data-view="symptoms"><span class="tab-icon" aria-hidden="true"></span>Symptoms</button>
+          <button class="journal-tab" type="button" role="tab" id="tab-mood" aria-controls="journal-dashboard" aria-selected="false" data-view="mood"><span class="tab-icon" aria-hidden="true"></span>Mood</button>
+          <button class="journal-tab" type="button" role="tab" id="tab-lifestyle" aria-controls="journal-dashboard" aria-selected="false" data-view="lifestyle"><span class="tab-icon" aria-hidden="true"></span>Lifestyle</button>
+          <button class="journal-tab" type="button" role="tab" id="tab-notes" aria-controls="journal-dashboard" aria-selected="false" data-view="notes"><span class="tab-icon" aria-hidden="true"></span>Notes</button>
+        </div>
+        <button class="button button-primary add-entry-button" id="add-entry" type="button"><span aria-hidden="true">＋</span> Add Entry</button>
+      </nav>
+
+      <div class="journal-grid" id="journal-dashboard">
+        <aside class="journal-column journal-left" aria-label="Cycle calendar and statistics">
+          <section class="journal-card calendar-card" aria-labelledby="calendar-title">
+            <div class="calendar-heading">
+              <h2 id="calendar-title">Cycle calendar</h2>
+              <div class="calendar-controls">
+                <button type="button" id="previous-month" aria-label="Previous month">‹</button>
+                <span id="calendar-month" aria-live="polite"></span>
+                <button type="button" id="next-month" aria-label="Next month">›</button>
+              </div>
+            </div>
+            <div class="calendar-weekdays" aria-hidden="true"><span>Su</span><span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span></div>
+            <div class="calendar-days" id="calendar-days" role="group" aria-label="Choose a calendar date"></div>
+            <div class="calendar-legend" aria-label="Calendar legend">
+              <span><i class="legend-dot period-dot"></i>Period</span>
+              <span><i class="legend-dot fertile-dot"></i>Fertile window</span>
+              <span><i class="legend-dot ovulation-dot"></i>Ovulation (est.)</span>
+            </div>
+            <button class="button button-outline log-period-button" id="log-period" type="button"><svg viewBox="0 0 20 20" aria-hidden="true"><rect x="3.5" y="5" width="13" height="12" rx="1.5"></rect><path d="M6.5 3v4m7-4v4M3.5 8.5h13m-9 4 1.5 1.5 3.5-3.5"></path></svg>Log Period</button>
+            <div class="cycle-stats">
+              <article class="cycle-stat-card cycle-next" id="next-cycle-card"></article>
+              <article class="cycle-stat-card"><span class="stat-symbol" aria-hidden="true">↻</span><div><span class="stat-label">Cycle length (avg.)</span><strong id="average-cycle">—</strong></div></article>
+              <article class="cycle-stat-card"><span class="stat-symbol" aria-hidden="true">♧</span><div><span class="stat-label">Period length (avg.)</span><strong id="average-period">—</strong></div></article>
+            </div>
+          </section>
+        </aside>
+
+        <section class="journal-column journal-center" aria-label="Journal check-in and entries">
+          <section class="checkin-section" aria-labelledby="checkin-title">
+            <div class="journal-section-heading">
+              <div><h2 id="checkin-title">Today's Check-in</h2><p class="section-date" id="today-date"></p></div>
+              <span class="today-mark" aria-hidden="true">♡</span>
+            </div>
+            <div class="checkin-grid" id="checkin-grid"></div>
+          </section>
+          <section class="recent-section" aria-labelledby="recent-title">
+            <div class="journal-section-heading recent-heading">
+              <h2 id="recent-title">Recent Entries</h2>
+              <button class="view-all-button" id="view-all" type="button">View all <span aria-hidden="true">→</span></button>
+            </div>
+            <div class="recent-entries" id="recent-entries"></div>
+          </section>
+        </section>
+      </div>
+
+      <section class="journal-insights-row" aria-label="Cycle insights and journal patterns">
+        <section class="journal-card insights-card" aria-labelledby="insights-title">
+          <div class="journal-section-heading insights-heading">
+            <h2 id="insights-title">Cycle Insights</h2>
+            <label class="sr-only" for="insight-range">Cycle chart time range</label>
+            <select id="insight-range" class="range-select"><option value="3">3 months</option><option value="6">6 months</option><option value="12">12 months</option></select>
+          </div>
+          <div class="cycle-chart-wrap" id="cycle-chart-wrap">
+            <svg class="cycle-chart" id="cycle-chart" viewBox="0 0 300 92" role="img" aria-label="Cycle length chart based on your logged period dates"></svg>
+            <p class="chart-empty" id="chart-empty">Log period dates over time to see your cycle history here.</p>
+          </div>
+          <div class="insights-legend"><span><i class="legend-dot period-dot"></i>Period</span><span><i class="legend-dot fertile-dot"></i>Fertile window</span><span><i class="legend-dot ovulation-dot"></i>Ovulation (est.)</span></div>
+          <p class="estimate-note">Cycle-based fertile-window estimates are not reliable contraception.</p>
+          <div class="insight-stats">
+            <article><strong id="insight-cycle-length">—</strong><span>days</span><small>avg. cycle length</small></article>
+            <article><strong id="insight-period-length">—</strong><span>days</span><small>avg. period length</small></article>
+            <article><strong id="insight-common-symptom">—</strong><small>most logged symptom</small></article>
+          </div>
+        </section>
+        <section class="journal-card patterns-card" aria-labelledby="patterns-title">
+          <div class="patterns-heading"><span class="bulb-icon" aria-hidden="true">♧</span><h2 id="patterns-title">Common patterns</h2></div>
+          <div id="pattern-list" class="pattern-list"></div>
+          <p class="patterns-caveat">These are observations from your entries, not medical conclusions.</p>
+        </section>
+        <aside class="journal-quote">
+          <img src="botanical.svg" alt="" aria-hidden="true">
+          <p>Your journal is a safe space to understand yourself better.</p>
+        </aside>
+      </div>
+      <p class="journal-privacy">Your journal is stored in this browser on this device. Browser storage is not encrypted or a secure medical-record system.</p>
+      <p class="journal-safety">For sudden, severe, or concerning symptoms, seek advice from a healthcare professional.</p>
+    </section>
+  </main>
+
+  <dialog class="journal-dialog" id="entry-dialog" aria-labelledby="dialog-title">
+    <div class="dialog-heading"><div><span class="dialog-eyebrow" id="dialog-eyebrow">YOUR PRIVATE JOURNAL</span><h2 id="dialog-title">Add an entry</h2></div><button class="dialog-close" id="close-dialog" type="button" aria-label="Close dialog">×</button></div>
+    <form id="entry-form" novalidate>
+      <label class="form-label" for="entry-type">Entry type</label>
+      <select id="entry-type" name="type">
+        <option value="period">Period</option><option value="symptoms">Symptoms</option><option value="mood">Mood</option><option value="sleep">Sleep</option><option value="lifestyle">Lifestyle</option><option value="water">Water</option><option value="notes">Notes</option>
+      </select>
+      <label class="form-label" for="entry-date">Date</label>
+      <input id="entry-date" name="date" type="date" required>
+      <div id="entry-fields"></div>
+      <p class="dialog-error" id="dialog-error" role="alert" hidden></p>
+      <p class="dialog-message" id="dialog-message" role="status" hidden></p>
+      <div class="dialog-actions">
+        <button class="button button-outline" id="cancel-entry" type="button">Cancel</button>
+        <button class="button button-primary" id="save-entry" type="submit">Save Entry</button>
+      </div>
+    </form>
+    <div id="entry-details" hidden></div>
+  </dialog>
+  <div class="journal-toast" id="journal-toast" role="status" aria-live="polite" hidden></div>
+  <script src="journal.js"></script>
+</body>
+</html>

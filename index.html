@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#FBF5EF">
+  <meta name="description" content="Understand your symptoms in everyday language and prepare for a conversation with a healthcare professional.">
+  <title>Yajnaseni — understand your symptoms</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Great+Vibes&family=Noto+Sans+Kannada:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Yajnaseni home">
+      <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M24 39C14 34 12 25 15 19c4-7 9-10 9-10s5 3 9 10c3 6 1 15-9 20Z"/><path d="M23 39C13 38 7 32 6 25c6 0 12 2 17 10M25 39c10-1 16-7 17-14-6 0-12 2-17 10M19 37c-3-7-3-15 0-22M29 37c3-7 3-15 0-22M24 39V10"/></g></svg></span>
+      <span class="brand-copy"><span class="brand-name">Yajnaseni</span><span class="brand-tagline" data-i18n="brandTagline">Your Health. Your Strength.</span></span>
+    </a>
+    <div class="header-menu" id="header-menu">
+      <nav class="main-nav" id="main-navigation" aria-label="Main navigation">
+        <a href="#checker" data-i18n="navSymptoms">Symptoms</a>
+        <a href="#checker" id="diagnosis-link" data-i18n="navDiagnosis">Probable Diagnosis</a>
+        <a href="journal.html" data-i18n="navJournal">Health Journal</a>
+        <div class="nav-dropdown" id="resources-dropdown">
+          <button type="button" class="resource-trigger" id="resources-trigger" aria-expanded="false" aria-controls="resources-menu" data-i18n="navResources">Resources</button>
+          <div class="resource-menu" id="resources-menu" hidden>
+            <a href="resources.html#health-resources" data-i18n="navHealthResources">Health Resources</a>
+            <a href="resources.html#diet-nutrition" data-i18n="navNutrition">Diet &amp; Nutrition</a>
+            <a href="resources.html#lifestyle-wellness" data-i18n="navWellness">Lifestyle &amp; Wellness</a>
+          </div>
+        </div>
+        <a href="contact.html" data-i18n="navContact">Contact Doctor</a>
+      </nav>
+      <div class="header-actions">
+        <div class="language-picker">
+          <label class="sr-only" for="language-select" data-i18n="navRegionalLanguages">Regional Languages</label>
+          <svg class="language-globe" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M2.8 12h18.4M12 2.5a15 15 0 0 1 0 19M12 2.5a15 15 0 0 0 0 19M5.2 6.5h13.6m-13.6 11h13.6"/></svg>
+          <select class="language-select" id="language-select" data-set-language="en" aria-label="Regional Languages">
+            <option value="en">English</option>
+            <option value="kn">ಕನ್ನಡ</option>
+          </select>
+        </div>
+        <a class="button button-small button-primary header-cta" href="#checker" data-i18n="navGetStarted">Get Started</a>
+      </div>
+    </div>
+    <button class="mobile-menu-toggle" id="mobile-menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="header-menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <span class="eyebrow" data-i18n="heroEyebrow">A HEALTHIER YOU, A STRONGER TOMORROW</span>
+        <h1 data-i18n="heroTitle">Understand Your Body,<br>Empower Yourself</h1>
+        <p class="hero-copy" data-i18n="heroCopy">Yajnaseni is your supportive companion for women’s health. Get personalized insights, learn about your health and make informed decisions — with trusted information, in a space that understands you.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#checker"><span data-i18n="heroButton">Start Symptom Check</span><span aria-hidden="true">→</span></a>
+          <a class="button button-outline hero-secondary" href="#how-it-works" data-i18n="heroLearnMore">Learn More</a>
+        </div>
+      </div>
+      <div class="hero-art">
+        <img class="hero-illustration" src="image/Yajnaseni.image.png" alt="Illustration of a woman with flowing dark hair, white flowers and botanical branches">
+        <p class="hero-mantra" aria-hidden="true" data-i18n="heroMantra">Your Health,<br>Your Strength</p>
+        <span class="mantra-rule" aria-hidden="true"></span>
+      </div>
+      <div class="hero-benefits" aria-label="Yajnaseni benefits">
+        <div class="hero-benefit"><svg viewBox="0 0 28 28" aria-hidden="true"><path d="M14 3 23 7v6c0 6-4 10-9 13-5-3-9-7-9-13V7l9-4Z"/><path d="m10 14 3 3 6-7"/></svg><span><strong data-i18n="benefitTrusted">Trusted Information</strong><small data-i18n="benefitTrustedCopy">Evidence-based health resources</small></span></div>
+        <div class="hero-benefit"><svg viewBox="0 0 28 28" aria-hidden="true"><circle cx="10" cy="9" r="4"/><path d="M2 24v-3c0-4 3-7 8-7s8 3 8 7v3H2ZM20 6a4 4 0 0 1 0 8m2 1c3 1 4 3 4 6v3h-4"/></svg><span><strong data-i18n="benefitPersonal">Personalized Guidance</strong><small data-i18n="benefitPersonalCopy">Insights based on your symptoms</small></span></div>
+        <div class="hero-benefit"><svg viewBox="0 0 28 28" aria-hidden="true"><rect x="5" y="11" width="18" height="14" rx="2"/><path d="M9 11V8a5 5 0 0 1 10 0v3m-5 5v4"/></svg><span><strong data-i18n="benefitPrivacy">Privacy Focused</strong><small data-i18n="benefitPrivacyCopy">Your information stays confidential</small></span></div>
+        <div class="hero-benefit"><svg viewBox="0 0 28 28" aria-hidden="true"><circle cx="14" cy="14" r="11"/><path d="M3 14h22M14 3a18 18 0 0 1 0 22M14 3a18 18 0 0 0 0 22M5 7h18M5 21h18"/></svg><span><strong data-i18n="benefitLanguages">Multilingual Support</strong><small data-i18n="benefitLanguagesCopy">Available in English and Kannada</small></span></div>
+      </div>
+    </section>
+
+    <section class="feature-section" id="how-it-works">
+      <div class="section-heading">
+        <div><span class="eyebrow" data-i18n="featuresEyebrow">EXPLORE OUR FEATURES</span><h2 data-i18n="featuresTitle">How We Support You</h2></div>
+        <p data-i18n="featuresIntro">Everything you need for your health journey, in one place.</p>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card card-symptoms"><svg class="feature-icon" viewBox="0 0 32 32" aria-hidden="true"><circle cx="13" cy="13" r="8"/><path d="m19 19 9 9M9 13h8m-4-4v8"/></svg><h3 data-i18n="featureSymptoms">Symptom Check</h3><p data-i18n="featureSymptomsCopy">Understand what your symptoms could mean.</p><a class="card-arrow" href="#checker" aria-label="Start a symptom check">→</a></article>
+        <article class="feature-card card-diagnosis"><svg class="feature-icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M8 3h12l7 7v19H8zM20 3v8h7M12 17h11m-11 5h11"/></svg><h3 data-i18n="featureDiagnosis">Probable Diagnosis</h3><p data-i18n="featureDiagnosisCopy">Get possible explanations based on reliable sources.</p><a class="card-arrow" id="feature-diagnosis-link" href="#checker" aria-label="View probable diagnosis">→</a></article>
+        <article class="feature-card card-journal"><svg class="feature-icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M4 5h10v22H4zM18 5h10v22H18zM14 8h4m-4 16h4m-7-14H7m4 4H7m4 4H7m14-8h4m-4 4h4"/></svg><h3 data-i18n="featureJournal">Health Journal</h3><p data-i18n="featureJournalCopy">Track your symptoms, periods, mood and more.</p><a class="card-arrow" href="journal.html" aria-label="Open health journal">→</a></article>
+        <article class="feature-card card-resources"><svg class="feature-icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 27V15m0 5C8 20 5 15 5 7c7 0 11 3 11 9m0 1c8 0 11-5 11-13-7 0-11 3-11 9M16 27l-5-5m5 2 5-5"/></svg><h3 data-i18n="featureResources">Resources</h3><p data-i18n="featureResourcesCopy">Explore articles on health, diet, lifestyle and wellness.</p><a class="card-arrow" href="resources.html#health-resources" aria-label="Explore health resources">→</a></article>
+        <article class="feature-card card-contact"><svg class="feature-icon" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="9" r="5"/><path d="M6 29v-5a10 10 0 0 1 20 0v5H6Zm10-10v10m-5-5h10"/></svg><h3 data-i18n="featureContact">Contact Doctor</h3><p data-i18n="featureContactCopy">Connect with a healthcare professional when needed.</p><a class="card-arrow" href="contact.html" aria-label="Find nearby healthcare professionals">→</a></article>
+      </div>
+      <div class="why-row">
+        <section class="why-card" aria-labelledby="why-title">
+          <img src="botanical.svg" alt="" aria-hidden="true">
+          <h2 id="why-title" data-i18n="whyTitle">Why Yajnaseni?</h2>
+          <ul>
+            <li><span aria-hidden="true">♡</span><span data-i18n="whyWomen">Designed for Women</span></li>
+            <li><span aria-hidden="true">◉</span><span data-i18n="whyEvidence">Reliable &amp; Evidence-based</span></li>
+            <li><span aria-hidden="true">✿</span><span data-i18n="whyEasy">Easy to Use</span></li>
+            <li><span aria-hidden="true">◎</span><span data-i18n="whyInclusive">Inclusive &amp; Accessible</span></li>
+          </ul>
+        </section>
+        <aside class="quote-card">
+          <span class="quote-mark" aria-hidden="true">“</span>
+          <p data-i18n="quoteText">Your health journey matters.<br>You are not alone.</p>
+          <img src="botanical.svg" alt="" aria-hidden="true">
+        </aside>
+      </div>
+    </section>
+
+    <section class="checker-section" id="checker">
+      <form id="symptom-form" class="symptom-wizard" novalidate>
+        <header class="wizard-header">
+          <p class="wizard-brand"><span class="wizard-brand-mark" aria-hidden="true">✿</span>Yajnaseni</p>
+          <p class="wizard-step" id="wizard-step-label" aria-live="polite">Step 1 of 3</p>
+        </header>
+        <div class="form-error" id="form-error" role="alert" hidden></div>
+        <div class="symptom-step" id="selection-step">
+          <div class="symptom-page-heading">
+            <h2 data-i18n="symptomPageTitle">Let's understand how you feel</h2>
+            <p data-i18n="symptomPageCopy">Choose the symptoms you've been experiencing. You can select multiple options.</p>
+          </div>
+          <div class="symptom-search-wrap">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.7"></circle><path d="m16 16 5 5"></path></svg>
+            <label class="sr-only" for="symptom-search" data-i18n="symptomSearchPlaceholder">Search symptoms, e.g. fatigue or cramps</label>
+            <input id="symptom-search" type="search" autocomplete="off" data-i18n-placeholder="symptomSearchPlaceholder" placeholder="Search symptoms, e.g. fatigue or cramps">
+            <button class="search-clear" id="clear-search" type="button" aria-label="Clear symptom search" hidden>×</button>
+          </div>
+          <section class="category-explorer" aria-labelledby="category-explorer-title">
+            <h3 id="category-explorer-title" data-i18n="categoryExplorerTitle">Explore by category</h3>
+            <div class="category-grid" id="symptom-categories" aria-label="Symptom categories"></div>
+          </section>
+          <section class="symptom-browser" aria-labelledby="active-category-heading">
+            <div class="symptom-browser-heading">
+              <h3 id="active-category-heading">Menstrual Health</h3>
+              <p data-i18n="selectAllHint">Select all that apply</p>
+            </div>
+            <div class="symptom-grid" id="symptom-options" aria-live="polite"></div>
+            <div class="symptom-empty" id="symptom-empty" role="status" hidden>
+              <span aria-hidden="true">♡</span>
+              <p data-i18n="noSymptomsFound">No symptoms found. Try a different search.</p>
+            </div>
+          </section>
+          <section class="custom-symptom-card" aria-labelledby="custom-symptom-title">
+            <div>
+              <h3 id="custom-symptom-title" data-i18n="customSymptomTitle">Something else?</h3>
+              <p data-i18n="customSymptomCopy">Can't find your symptom? Add it here so you can describe your experience in your own words.</p>
+            </div>
+            <div class="custom-symptom-entry">
+              <label class="sr-only" for="custom-symptom-input" data-i18n="customSymptomPlaceholder">Add a symptom in your own words</label>
+              <input id="custom-symptom-input" type="text" maxlength="100" data-i18n-placeholder="customSymptomPlaceholder" placeholder="Add a symptom in your own words">
+              <button class="button button-primary" id="add-custom-symptom" type="button" data-i18n="addSymptomButton">Add symptom</button>
+            </div>
+            <p class="custom-symptom-error" id="custom-symptom-error" role="alert" hidden></p>
+          </section>
+          <section class="selected-panel" aria-labelledby="selected-panel-title" aria-live="polite">
+            <div class="selected-panel-heading">
+              <h3 id="selected-panel-title" data-i18n="selectedSymptomsTitle">Your selected symptoms</h3>
+              <button class="text-button" id="clear-selection" type="button" data-i18n="clearSelectionButton">Clear selection</button>
+            </div>
+            <p class="selected-count" id="selected-count">0 symptoms selected</p>
+            <ul class="selected-list" id="selected-symptoms"></ul>
+          </section>
+          <div class="wizard-actions selection-actions">
+            <p class="privacy-note" data-i18n="symptomPrivacyNote">Your selections stay in this browser and aren't saved.</p>
+            <button class="button button-primary continue-button" id="continue-to-details" type="button" disabled><span data-i18n="continueButton">Continue</span><span aria-hidden="true">→</span></button>
+          </div>
+        </div>
+        <div class="symptom-step details-step" id="details-step" hidden>
+          <div class="symptom-page-heading">
+            <h2 data-i18n="detailsPageTitle">A little more about what you're experiencing</h2>
+            <p data-i18n="detailsPageCopy">These optional details help you prepare a clearer summary for a healthcare conversation.</p>
+          </div>
+          <div class="details-selected">
+            <p class="field-label" data-i18n="selectedForSummary">Symptoms you selected</p>
+            <ul class="selected-list" id="details-selected-symptoms"></ul>
+          </div>
+          <label class="field-label" for="symptom-text" data-i18n="describeLabel">Anything else you'd like to share? (optional)</label>
+          <textarea id="symptom-text" rows="3" maxlength="1200" data-i18n-placeholder="describePlaceholder" placeholder="Add any context you'd like to include in your summary"></textarea>
+          <div class="form-row details-fields">
+            <div class="field-group">
+              <label class="field-label" for="duration" data-i18n="durationLabel">How long have you noticed these symptoms?</label>
+              <select id="duration"><option value="" data-i18n="chooseOption">Choose an option</option><option value="days" data-i18n="durationDays">A few days</option><option value="weeks" data-i18n="durationWeeks">A few weeks</option><option value="months" data-i18n="durationMonths">A few months</option><option value="longer" data-i18n="durationLonger">More than 6 months</option><option value="unsure" data-i18n="durationUnsure">I'm not sure</option></select>
+            </div>
+            <div class="field-group">
+              <label class="field-label" for="severity" data-i18n="severityLabel">How much are they affecting you?</label>
+              <select id="severity"><option value="" data-i18n="chooseOption">Choose an option</option><option value="mild" data-i18n="severityMild">A little</option><option value="moderate" data-i18n="severityModerate">Somewhat</option><option value="severe" data-i18n="severitySevere">A lot</option></select>
+            </div>
+          </div>
+          <div class="followup-block">
+            <p class="field-label followup-title" data-i18n="followupTitle">A couple more details (optional)</p>
+            <div class="form-row details-fields">
+              <div class="field-group">
+                <label class="field-label" for="period-pattern" data-i18n="periodQuestion">If relevant, how have your periods changed?</label>
+                <select id="period-pattern"><option value="" data-i18n="preferNot">Choose an option or skip</option><option value="irregular" data-i18n="periodIrregular">They come at unpredictable times</option><option value="missed" data-i18n="periodMissed">I've missed periods</option><option value="heavy" data-i18n="periodHeavy">They've been heavier than usual</option><option value="painful" data-i18n="periodPainful">They've been more painful</option><option value="no-change" data-i18n="periodNoChange">No change / not relevant</option></select>
+              </div>
+              <div class="field-group">
+                <label class="field-label" for="daily-impact" data-i18n="impactQuestion">How much do these symptoms affect daily life?</label>
+                <select id="daily-impact"><option value="" data-i18n="preferNot">Choose an option or skip</option><option value="not-much" data-i18n="impactLow">Not much</option><option value="some" data-i18n="impactSome">Some days</option><option value="often" data-i18n="impactOften">Often</option></select>
+              </div>
+            </div>
+          </div>
+          <p class="safety-note" data-i18n="safetyNote">This is for education, not diagnosis. For sudden, severe or concerning symptoms, seek advice from a healthcare professional.</p>
+          <div class="wizard-actions details-actions">
+            <button class="button button-outline" id="back-to-selection" type="button"><span aria-hidden="true">←</span><span data-i18n="backButton">Back</span></button>
+            <button class="button button-primary continue-button" type="submit"><span data-i18n="viewSummaryButton">View my summary</span><span aria-hidden="true">→</span></button>
+          </div>
+          <p class="form-footnote" data-i18n="localOnly">Your answers are processed on this device only.</p>
+        </div>
+      </form>
+    </section>
+
+    <section class="results-section" id="results" hidden aria-live="polite"></section>
+
+    <section class="care-section" id="care">
+      <div class="care-heading"><span class="eyebrow" data-i18n="careEyebrow">YOUR WELLBEING COMES FIRST</span><h2 data-i18n="careTitle">Know when to reach out.</h2><p data-i18n="careIntro">If symptoms are new, persistent, changing, or worrying you, a healthcare professional can help you understand what’s going on.</p></div>
+      <div class="care-grid">
+        <article class="care-card routine-card"><span class="care-symbol">♡</span><div><h3 data-i18n="routineTitle">Book a routine appointment</h3><p data-i18n="routineCopy">Consider arranging a visit if periods are persistently irregular or absent, or if acne, hair changes, fatigue, or weight changes continue to concern you. A clinician can discuss your history and whether any evaluation is appropriate.</p></div></article>
+        <article class="care-card urgent-card"><span class="care-symbol">!</span><div><h3 data-i18n="urgentTitle">Get urgent medical help</h3><p data-i18n="urgentCopy">Seek urgent care now for severe pelvic or abdominal pain, fainting, or very heavy bleeding—especially if you feel weak, dizzy, or unwell. Contact local emergency services if symptoms are severe or you may be in immediate danger.</p></div></article>
+      </div>
+      <p class="care-note" data-i18n="careNote">Yajnaseni does not diagnose, prescribe medicines, or replace care from a qualified professional. Never delay urgent care based on this tool.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer"><a class="brand footer-brand" href="#home" aria-label="Yajnaseni home"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M24 39C14 34 12 25 15 19c4-7 9-10 9-10s5 3 9 10c3 6 1 15-9 20Z"/><path d="M23 39C13 38 7 32 6 25c6 0 12 2 17 10M25 39c10-1 16-7 17-14-6 0-12 2-17 10M19 37c-3-7-3-15 0-22M29 37c3-7 3-15 0-22M24 39V10"/></g></svg></span><span class="brand-copy"><span class="brand-name">Yajnaseni</span></span></a><p data-i18n="footerText">A thoughtful starting point for your health conversation.</p><span class="footer-private" data-i18n="footerPrivacy">No account · No data collection</span></footer>
+  <script src="app.js"></script>
+</body>
+</html>
